@@ -8,134 +8,332 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:#f8f6f2;color:#1a1410;min-height:100vh}
-header{background:linear-gradient(135deg,#1a0a00 0%,#2d1400 40%,#0a1a0a 100%);padding:60px 20px 50px;text-align:center;border-bottom:1px solid #3a2a10;position:relative;overflow:hidden}
-.flag-bar{display:flex;height:6px;width:100%;position:absolute;top:0;left:0}
+
+/* HEADER */
+header{background:linear-gradient(135deg,#1a0a00 0%,#2d1400 40%,#0a1a0a 100%);padding:48px 16px 40px;text-align:center;border-bottom:1px solid #3a2a10;position:relative;overflow:hidden}
+.flag-bar{display:flex;height:5px;width:100%;position:absolute;top:0;left:0}
 .flag-bar div{flex:1}
 .c1{background:#007A4D}.c2{background:#FFB612}.c3{background:#DE3831}.c4{background:#002395}.c5{background:#fff}.c6{background:#007A4D}
-.tag-pill{display:inline-block;background:rgba(255,182,18,0.15);border:1px solid rgba(255,182,18,0.4);color:#FFB612;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:20px}
-h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,52px);font-weight:700;color:#f5e6c8;line-height:1.2;margin-bottom:16px}
+.tag-pill{display:inline-block;background:rgba(255,182,18,0.15);border:1px solid rgba(255,182,18,0.4);color:#FFB612;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+h1{font-family:'Playfair Display',serif;font-size:clamp(24px,6vw,52px);font-weight:700;color:#f5e6c8;line-height:1.2;margin-bottom:12px}
 h1 span{color:#FFB612}
-.sub{font-size:15px;color:#c8b890;max-width:480px;margin:0 auto;line-height:1.6}
-.itinerary-wrap{max-width:1000px;margin:0 auto;padding:60px 20px 10px}
-.section-header{text-align:center;margin-bottom:36px}
-.section-header .sec-tag{display:inline-block;background:rgba(0,122,77,.1);border:1px solid rgba(0,122,77,.3);color:#007A4D;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px}
-.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,34px);color:#1a1410;margin-bottom:8px}
+.sub{font-size:14px;color:#c8b890;max-width:480px;margin:0 auto;line-height:1.6;padding:0 8px}
+
+/* ROTEIRO 14 DIAS */
+.itinerary-wrap{max-width:960px;margin:0 auto;padding:48px 16px 10px}
+.section-header{text-align:center;margin-bottom:28px}
+.sec-tag{display:inline-block;background:rgba(0,122,77,.1);border:1px solid rgba(0,122,77,.3);color:#007A4D;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:12px}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(20px,4vw,32px);color:#1a1410;margin-bottom:6px}
 .section-header p{font-size:13px;color:#8a7a60;max-width:520px;margin:0 auto}
-.itin-table-wrap{background:#fff;border:1px solid #e0d8cc;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.05)}
-.itin-table{width:100%;border-collapse:collapse;font-size:13.5px}
+
+.itin-table-wrap{background:#fff;border:1px solid #e0d8cc;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.itin-table{width:100%;border-collapse:collapse;font-size:13px;min-width:500px}
 .itin-table thead tr{background:linear-gradient(135deg,#1a0a00,#2d1400)}
-.itin-table thead th{padding:14px 18px;text-align:left;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c8a870}
+.itin-table thead th{padding:12px 14px;text-align:left;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c8a870;white-space:nowrap}
 .itin-table tbody tr{border-bottom:1px solid #f0e8d8;transition:background .15s}
 .itin-table tbody tr:last-child{border-bottom:none}
 .itin-table tbody tr:hover{background:#fdf9f0}
-.itin-table td{padding:13px 18px;vertical-align:middle}
-.day-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#FFB612;color:#000;border-radius:50%;font-weight:700;font-size:12px;flex-shrink:0}
-.dest-cell{font-weight:600;color:#1a1410}
-.act-cell{color:#4a3a20;line-height:1.5}
+.itin-table td{padding:11px 14px;vertical-align:middle}
+.day-num{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:#FFB612;color:#000;border-radius:50%;font-weight:700;font-size:12px;flex-shrink:0}
+.dest-cell{font-weight:600;color:#1a1410;font-size:13px}
+.act-cell{color:#4a3a20;line-height:1.5;font-size:12px}
 .phase-ct{background:rgba(0,122,77,.06)}
 .phase-gr{background:rgba(0,35,149,.04)}
 .phase-kr{background:rgba(222,56,49,.05)}
 .phase-fly{background:rgba(255,182,18,.07)}
-.phase-label{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:10px}
+.phase-label{display:inline-flex;align-items:center;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:3px 8px;border-radius:8px;white-space:nowrap}
 .pl-ct{background:rgba(0,122,77,.12);color:#007A4D;border:1px solid rgba(0,122,77,.25)}
 .pl-gr{background:rgba(0,35,149,.1);color:#002395;border:1px solid rgba(0,35,149,.2)}
 .pl-kr{background:rgba(222,56,49,.12);color:#c0302a;border:1px solid rgba(222,56,49,.25)}
 .pl-fly{background:rgba(180,130,0,.12);color:#8a6000;border:1px solid rgba(180,130,0,.3)}
-.phase-divider td{padding:8px 18px;background:#f8f4ec;border-top:2px solid #e8e0d0;border-bottom:2px solid #e8e0d0}
-.phase-divider-text{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#a89870}
-.grid{max-width:1200px;margin:0 auto;padding:50px 20px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px}
-.card{background:#ffffff;border:1px solid #e0d8cc;border-radius:20px;overflow:hidden;transition:transform .3s,box-shadow .3s;position:relative}
+.phase-divider td{padding:7px 14px;background:#f8f4ec;border-top:2px solid #e8e0d0;border-bottom:2px solid #e8e0d0}
+.phase-divider-text{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a89870}
+
+/* CARDS ROTEIROS */
+.grid{max-width:1200px;margin:0 auto;padding:40px 16px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+@media(max-width:640px){.grid{grid-template-columns:1fr;padding:32px 12px 20px}}
+.card{background:#ffffff;border:1px solid #e0d8cc;border-radius:18px;overflow:hidden;transition:transform .3s,box-shadow .3s;position:relative}
 .card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.10)}
-.card-hero{width:100%;height:210px;display:flex;align-items:center;justify-content:center;font-size:70px}
+.card-hero{width:100%;height:180px;display:flex;align-items:center;justify-content:center;font-size:60px}
 .hero1{background:linear-gradient(135deg,#d4edda,#a8d5b8)}
 .hero2{background:linear-gradient(135deg,#fde8c8,#f5c890)}
 .hero3{background:linear-gradient(135deg,#cce0f5,#a0c8ee)}
-.num{position:absolute;top:190px;right:18px;width:44px;height:44px;background:#FFB612;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;border:3px solid #ffffff}
-.body{padding:26px 22px}
-.badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:12px;margin-bottom:11px}
+.num{position:absolute;top:160px;right:16px;width:40px;height:40px;background:#FFB612;color:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;border:3px solid #ffffff}
+.body{padding:22px 18px}
+.badge{display:inline-block;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:10px;margin-bottom:10px}
 .b1{background:rgba(0,122,77,.1);color:#007A4D;border:1px solid rgba(0,122,77,.3)}
 .b2{background:rgba(222,56,49,.1);color:#c0302a;border:1px solid rgba(222,56,49,.3)}
 .b3{background:rgba(0,35,149,.1);color:#002395;border:1px solid rgba(0,35,149,.3)}
-.card h2{font-family:'Playfair Display',serif;font-size:21px;color:#1a1410;margin-bottom:8px}
-.meta{display:flex;gap:14px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
-.mi{font-size:12px;color:#8a7a60;display:flex;align-items:center;gap:5px}
+.card h2{font-family:'Playfair Display',serif;font-size:19px;color:#1a1410;margin-bottom:8px}
+.meta{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.mi{font-size:11px;color:#8a7a60;display:flex;align-items:center;gap:4px}
 .mi strong{color:#5a4a2a}
-.clim{display:inline-flex;align-items:center;gap:5px;background:#f0ebe0;border:1px solid #d8cfba;border-radius:8px;padding:4px 10px;font-size:11px;color:#7a6a4a}
-.desc{font-size:13px;color:#6a5a40;line-height:1.7;margin-bottom:18px;border-left:3px solid #d8c89a;padding-left:12px}
-.st{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#a89870;margin-bottom:9px}
-ul.links{list-style:none;display:flex;flex-direction:column;gap:7px}
-ul.links li a{display:flex;align-items:center;gap:10px;text-decoration:none;color:#4a3a20;font-size:13px;padding:9px 12px;border-radius:10px;background:#f8f4ec;border:1px solid #e8e0d0;transition:all .2s}
+.clim{display:inline-flex;align-items:center;gap:4px;background:#f0ebe0;border:1px solid #d8cfba;border-radius:7px;padding:3px 9px;font-size:10px;color:#7a6a4a}
+.desc{font-size:12px;color:#6a5a40;line-height:1.7;margin-bottom:16px;border-left:3px solid #d8c89a;padding-left:10px}
+.st{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#a89870;margin-bottom:8px}
+ul.links{list-style:none;display:flex;flex-direction:column;gap:6px}
+ul.links li a{display:flex;align-items:center;gap:9px;text-decoration:none;color:#4a3a20;font-size:12px;padding:8px 10px;border-radius:9px;background:#f8f4ec;border:1px solid #e8e0d0;transition:all .2s}
 ul.links li a:hover{background:rgba(255,182,18,.15);border-color:rgba(255,182,18,.5);color:#a07000;transform:translateX(4px)}
-.ico{font-size:15px;width:22px;text-align:center;flex-shrink:0}
+.ico{font-size:14px;width:20px;text-align:center;flex-shrink:0}
 .lt{flex:1}
 .ar{color:#c8b890;font-size:10px}
-ul.links li a:hover .ar{color:#FFB612}
-.hotels-section{max-width:1200px;margin:0 auto;padding:10px 20px 60px}
-.hotel-block{background:#fff;border:1px solid #e0d8cc;border-radius:20px;overflow:hidden;margin-bottom:28px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
-.hotel-block-header{padding:24px 28px 20px;border-bottom:1px solid #f0e8d8}
-.hb-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:12px;margin-bottom:10px}
+
+/* HOTEIS */
+.hotels-section{max-width:1200px;margin:0 auto;padding:8px 16px 50px}
+@media(max-width:640px){.hotels-section{padding:8px 12px 40px}}
+.hotel-block{background:#fff;border:1px solid #e0d8cc;border-radius:18px;overflow:hidden;margin-bottom:22px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.hotel-block-header{padding:20px 20px 16px;border-bottom:1px solid #f0e8d8}
+.hb-tag{display:inline-block;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:10px;margin-bottom:8px}
 .hb-tag-green{background:rgba(0,122,77,.1);color:#007A4D;border:1px solid rgba(0,122,77,.3)}
 .hb-tag-blue{background:rgba(0,35,149,.1);color:#002395;border:1px solid rgba(0,35,149,.3)}
 .hb-tag-red{background:rgba(222,56,49,.1);color:#c0302a;border:1px solid rgba(222,56,49,.3)}
-.hotel-block-header h3{font-family:'Playfair Display',serif;font-size:22px;color:#1a1410;margin-bottom:4px}
-.hotel-block-header p{font-size:13px;color:#8a7a60}
-.sub-section{padding:20px 28px 0}
-.sub-section-title{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#a89870;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.hotel-block-header h3{font-family:'Playfair Display',serif;font-size:20px;color:#1a1410;margin-bottom:3px}
+.hotel-block-header p{font-size:12px;color:#8a7a60}
+.sub-section{padding:16px 20px 0}
+.sub-section-title{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#a89870;margin-bottom:10px;display:flex;align-items:center;gap:8px}
 .sub-section-title::after{content:'';flex:1;height:1px;background:#e8e0d0}
-.hotel-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:13px}
-.hotel-table thead tr{background:#f8f4ec}
-.hotel-table thead th{padding:10px 14px;text-align:left;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#a89870;border-bottom:2px solid #e8e0d0}
-.hotel-table tbody tr{border-bottom:1px solid #f0e8d8;transition:background .15s}
-.hotel-table tbody tr:last-child{border-bottom:none}
-.hotel-table tbody tr:hover{background:#fdf9f0}
-.hotel-table td{padding:12px 14px;vertical-align:top;color:#3a2a10}
-.hotel-table td:first-child{font-weight:600;color:#1a1410}
-.hotel-table .price{color:#c8900a;font-weight:600}
-.hotel-table .highlight{font-size:12px;color:#6a5a40;line-height:1.5}
-.star-badge{display:inline-flex;align-items:center;gap:4px;background:#fffbf0;border:1px solid #f0d870;color:#b08000;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;margin-left:6px;vertical-align:middle}
-footer{text-align:center;padding:36px 20px;border-top:1px solid #e0d8cc;color:#a89870;font-size:12px;letter-spacing:1px}
+
+/* Hotel cards para mobile */
+.hotel-cards{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.hotel-card{background:#f8f4ec;border:1px solid #e8e0d0;border-radius:12px;padding:14px 16px}
+.hotel-card-name{font-weight:600;color:#1a1410;font-size:14px;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.hotel-card-loc{font-size:11px;color:#8a7a60;margin-bottom:6px}
+.hotel-card-highlight{font-size:12px;color:#6a5a40;line-height:1.5}
+.star-badge{display:inline-flex;align-items:center;gap:3px;background:#fffbf0;border:1px solid #f0d870;color:#b08000;font-size:9px;font-weight:600;padding:2px 7px;border-radius:8px;flex-shrink:0}
+
+footer{text-align:center;padding:32px 16px;border-top:1px solid #e0d8cc;color:#a89870;font-size:11px;letter-spacing:1px}
 footer span{color:#c8900a}
 </style>
 </head>
 <body>
+
 <header>
-<div class="flag-bar"><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div><div class="c5"></div><div class="c6"></div></div>
-<div class="tag-pill">VIAGEM - JULHO 2026</div>
-<h1>Roteiros na <span>Africa do Sul</span></h1>
-<p class="sub">3 experiencias unicas para explorar um dos destinos mais fascinantes do mundo</p>
+  <div class="flag-bar"><div class="c1"></div><div class="c2"></div><div class="c3"></div><div class="c4"></div><div class="c5"></div><div class="c6"></div></div>
+  <div class="tag-pill">VIAGEM - JULHO 2026</div>
+  <h1>Roteiros na <span>Africa do Sul</span></h1>
+  <p class="sub">3 experiencias unicas para explorar um dos destinos mais fascinantes do mundo</p>
 </header>
+
+<!-- ROTEIRO 14 DIAS -->
 <div class="itinerary-wrap">
-<div class="section-header"><div class="sec-tag">ROTEIRO SUGERIDO</div><h2>14 Dias na Africa do Sul - Julho 2026</h2><p>Itinerario completo para passar a sua agencia de viagens</p></div>
-<div class="itin-table-wrap"><table class="itin-table"><thead><tr><th>Dia</th><th>Destino</th><th>Atividade Principal</th><th>Fase</th></tr></thead><tbody>
-<tr class="phase-fly"><td><div class="day-num">1</div></td><td class="dest-cell">GRU - Cape Town</td><td class="act-cell">Voo, check-in hotel, descanso</td><td><span class="phase-label pl-fly">Chegada</span></td></tr>
-<tr class="phase-divider"><td colspan="4"><span class="phase-divider-text">FASE 1 - CAPE TOWN e WINELANDS - DIAS 2-5</span></td></tr>
-<tr class="phase-ct"><td><div class="day-num">2</div></td><td class="dest-cell">Cape Town</td><td class="act-cell">Table Mountain, Bo-Kaap, V&amp;A Waterfront</td><td><span class="phase-label pl-ct">Cape Town</span></td></tr>
-<tr class="phase-ct"><td><div class="day-num">3</div></td><td class="dest-cell">Cape Town</td><td class="act-cell">Cape Point, Pinguins em Boulders Beach</td><td><span class="phase-label pl-ct">Cape Town</span></td></tr>
-<tr class="phase-ct"><td><div class="day-num">4</div></td><td class="dest-cell">Stellenbosch / Franschhoek</td><td class="act-cell">Vinicolas, degustacoes, gastronomia</td><td><span class="phase-label pl-ct">Winelands</span></td></tr>
-<tr class="phase-ct"><td><div class="day-num">5</div></td><td class="dest-cell">Cape Town</td><td class="act-cell">Robben Island, compras, dia livre</td><td><span class="phase-label pl-ct">Cape Town</span></td></tr>
-<tr class="phase-divider"><td colspan="4"><span class="phase-divider-text">FASE 2 - GARDEN ROUTE - DIAS 6-10</span></td></tr>
-<tr class="phase-gr"><td><div class="day-num">6</div></td><td class="dest-cell">Cape Town - Hermanus</td><td class="act-cell">Drive cenico, baleias ao chegar</td><td><span class="phase-label pl-gr">Hermanus</span></td></tr>
-<tr class="phase-gr"><td><div class="day-num">7</div></td><td class="dest-cell">Hermanus</td><td class="act-cell">Whale watching, cliff path walk</td><td><span class="phase-label pl-gr">Hermanus</span></td></tr>
-<tr class="phase-gr"><td><div class="day-num">8</div></td><td class="dest-cell">Hermanus - Knysna</td><td class="act-cell">Drive pela Garden Route, Oudtshoorn</td><td><span class="phase-label pl-gr">Garden Route</span></td></tr>
-<tr class="phase-gr"><td><div class="day-num">9</div></td><td class="dest-cell">Knysna</td><td class="act-cell">Lagoa, Knysna Heads, ostras, florestas</td><td><span class="phase-label pl-gr">Knysna</span></td></tr>
-<tr class="phase-gr"><td><div class="day-num">10</div></td><td class="dest-cell">Knysna - Tsitsikamma</td><td class="act-cell">Storms River, trilhas, Bloukrans Bungee</td><td><span class="phase-label pl-gr">Tsitsikamma</span></td></tr>
-<tr class="phase-divider"><td colspan="4"><span class="phase-divider-text">FASE 3 - KRUGER SAFARI - DIAS 11-14</span></td></tr>
-<tr class="phase-kr"><td><div class="day-num">11</div></td><td class="dest-cell">Tsitsikamma - Kruger</td><td class="act-cell">Voo George - Hoedspruit, check-in lodge</td><td><span class="phase-label pl-kr">Transfer</span></td></tr>
-<tr class="phase-kr"><td><div class="day-num">12</div></td><td class="dest-cell">Kruger Safari</td><td class="act-cell">Game drives manha e tarde, bush walk</td><td><span class="phase-label pl-kr">Safari</span></td></tr>
-<tr class="phase-kr"><td><div class="day-num">13</div></td><td class="dest-cell">Kruger Safari</td><td class="act-cell">Game drives, night drive, spa</td><td><span class="phase-label pl-kr">Safari</span></td></tr>
-<tr class="phase-fly"><td><div class="day-num">14</div></td><td class="dest-cell">Kruger - JNB - GRU</td><td class="act-cell">Safari matinal, voo para casa</td><td><span class="phase-label pl-fly">Retorno</span></td></tr>
-</tbody></table></div>
+  <div class="section-header">
+    <div class="sec-tag">ROTEIRO SUGERIDO</div>
+    <h2>14 Dias na Africa do Sul</h2>
+    <p>Julho 2026 - Itinerario completo para a agencia de viagens</p>
+  </div>
+  <div class="itin-table-wrap">
+    <div class="table-scroll">
+      <table class="itin-table">
+        <thead><tr><th>Dia</th><th>Destino</th><th>Atividade Principal</th><th>Fase</th></tr></thead>
+        <tbody>
+          <tr class="phase-fly"><td><div class="day-num">1</div></td><td class="dest-cell">GRU - Cape Town</td><td class="act-cell">Voo, check-in hotel, descanso</td><td><span class="phase-label pl-fly">Chegada</span></td></tr>
+          <tr class="phase-divider"><td colspan="4"><span class="phase-divider-text">FASE 1 - CAPE TOWN E WINELANDS - DIAS 2-5</span></td></tr>
+          <tr class="phase-ct"><td><div class="day-num">2</div></td><td class="dest-cell">Cape Town</td><td class="act-cell">Table Mountain, Bo-Kaap, V&amp;A Waterfront</td><td><span class="phase-label pl-ct">Cape Town</span></td></tr>
+          <tr class="phase-ct"><td><div class="day-num">3</div></td><td class="dest-cell">Cape Town</td><td class="act-cell">Cape Point, Pinguins em Boulders Beach</td><td><span class="phase-label pl-ct">Cape Town</span></td></tr>
+          <tr class="phase-ct"><td><div class="day-num">4</div></td><td class="dest-cell">Stellenbosch/Franschhoek</td><td class="act-cell">Vinicolas, degustacoes, gastronomia</td><td><span class="phase-label pl-ct">Winelands</span></td></tr>
+          <tr class="phase-ct"><td><div class="day-num">5</div></td><td class="dest-cell">Cape Town</td><td class="act-cell">Robben Island, compras, dia livre</td><td><span class="phase-label pl-ct">Cape Town</span></td></tr>
+          <tr class="phase-divider"><td colspan="4"><span class="phase-divider-text">FASE 2 - GARDEN ROUTE - DIAS 6-10</span></td></tr>
+          <tr class="phase-gr"><td><div class="day-num">6</div></td><td class="dest-cell">Cape Town - Hermanus</td><td class="act-cell">Drive cenico, baleias ao chegar</td><td><span class="phase-label pl-gr">Hermanus</span></td></tr>
+          <tr class="phase-gr"><td><div class="day-num">7</div></td><td class="dest-cell">Hermanus</td><td class="act-cell">Whale watching, cliff path walk</td><td><span class="phase-label pl-gr">Hermanus</span></td></tr>
+          <tr class="phase-gr"><td><div class="day-num">8</div></td><td class="dest-cell">Hermanus - Knysna</td><td class="act-cell">Drive pela Garden Route, Oudtshoorn</td><td><span class="phase-label pl-gr">Garden Route</span></td></tr>
+          <tr class="phase-gr"><td><div class="day-num">9</div></td><td class="dest-cell">Knysna</td><td class="act-cell">Lagoa, Knysna Heads, ostras, florestas</td><td><span class="phase-label pl-gr">Knysna</span></td></tr>
+          <tr class="phase-gr"><td><div class="day-num">10</div></td><td class="dest-cell">Knysna - Tsitsikamma</td><td class="act-cell">Storms River, trilhas, Bloukrans Bungee</td><td><span class="phase-label pl-gr">Tsitsikamma</span></td></tr>
+          <tr class="phase-divider"><td colspan="4"><span class="phase-divider-text">FASE 3 - KRUGER SAFARI - DIAS 11-14</span></td></tr>
+          <tr class="phase-kr"><td><div class="day-num">11</div></td><td class="dest-cell">Tsitsikamma - Kruger</td><td class="act-cell">Voo George - Hoedspruit, check-in lodge</td><td><span class="phase-label pl-kr">Transfer</span></td></tr>
+          <tr class="phase-kr"><td><div class="day-num">12</div></td><td class="dest-cell">Kruger Safari</td><td class="act-cell">Game drives manha e tarde, bush walk</td><td><span class="phase-label pl-kr">Safari</span></td></tr>
+          <tr class="phase-kr"><td><div class="day-num">13</div></td><td class="dest-cell">Kruger Safari</td><td class="act-cell">Game drives, night drive, spa</td><td><span class="phase-label pl-kr">Safari</span></td></tr>
+          <tr class="phase-fly"><td><div class="day-num">14</div></td><td class="dest-cell">Kruger - JNB - GRU</td><td class="act-cell">Safari matinal, voo para casa</td><td><span class="phase-label pl-fly">Retorno</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
+
+<!-- CARDS ROTEIROS -->
 <div class="grid">
-<div class="card"><div class="card-hero hero1">&#127956;</div><div class="num">1</div><div class="body"><div class="badge b1">Cidade + Natureza</div><h2>Cape Town e Winelands</h2><div class="meta"><div class="mi"><strong>6-7 dias</strong></div><div class="clim">8C-17C Inverno</div></div><div class="desc">Table Mountain, Cape Point, Bo-Kaap e as vinicolas de Franschhoek e Stellenbosch.</div><div class="st">Sites Essenciais</div><ul class="links"><li><a href="https://www.tablemountain.net" target="_blank"><span class="ico">&#9968;</span><span class="lt">Table Mountain Aerial Cableway</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.capepointroute.co.za" target="_blank"><span class="ico">&#127754;</span><span class="lt">Cape Point Route</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.franschhoek.org.za" target="_blank"><span class="ico">&#127863;</span><span class="lt">Franschhoek Wine Valley</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.stellenboschwineroads.co.za" target="_blank"><span class="ico">&#127815;</span><span class="lt">Stellenbosch Winelands</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.capetown.travel" target="_blank"><span class="ico">&#128506;</span><span class="lt">Cape Town Tourism Oficial</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.robben-island.org.za" target="_blank"><span class="ico">&#127963;</span><span class="lt">Robben Island Museum</span><span class="ar">&#8599;</span></a></li></ul></div></div>
-<div class="card"><div class="card-hero hero2">&#129409;</div><div class="num">2</div><div class="body"><div class="badge b2">Safari Premium</div><h2>Kruger e Reservas Privadas</h2><div class="meta"><div class="mi"><strong>4-5 noites</strong></div><div class="clim">12C-27C Seco</div></div><div class="desc">Julho e perfeito para safari. Sabi Sands e Londolozi oferecem os Big Five a metros de distancia.</div><div class="st">Sites Essenciais</div><ul class="links"><li><a href="https://www.sanparks.org/parks/kruger" target="_blank"><span class="ico">&#128024;</span><span class="lt">SANParks - Kruger National Park</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.londolozi.com" target="_blank"><span class="ico">&#129409;</span><span class="lt">Londolozi Private Game Reserve</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.sabisands.co.za" target="_blank"><span class="ico">&#128374;</span><span class="lt">Sabi Sands Game Reserve</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.singita.com" target="_blank"><span class="ico">&#127957;</span><span class="lt">Singita Luxury Safari Lodges</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.andbeyond.com/destinations/africa/south-africa" target="_blank"><span class="ico">&#127749;</span><span class="lt">andBeyond South Africa</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.krugerpark.co.za" target="_blank"><span class="ico">&#128214;</span><span class="lt">Kruger Park - Guia Completo</span><span class="ar">&#8599;</span></a></li></ul></div></div>
-<div class="card"><div class="card-hero hero3">&#128011;</div><div class="num">3</div><div class="body"><div class="badge b3">Road Trip</div><h2>Garden Route</h2><div class="meta"><div class="mi"><strong>7-10 dias</strong></div><div class="clim">11C-19C Dias claros</div></div><div class="desc">Baleias em Hermanus, bungee de 216m na Bloukrans Bridge e ostras em Knysna.</div><div class="st">Sites Essenciais</div><ul class="links"><li><a href="https://www.gardenroute.co.za" target="_blank"><span class="ico">&#128739;</span><span class="lt">Garden Route Official Tourism</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.whalewatchsa.com" target="_blank"><span class="ico">&#128011;</span><span class="lt">Whale Watching Hermanus</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.faceadrenalin.com/bungee" target="_blank"><span class="ico">&#129656;</span><span class="lt">Bloukrans Bridge Bungee Jump</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.sanparks.org/parks/garden_route" target="_blank"><span class="ico">&#127807;</span><span class="lt">Tsitsikamma National Park</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.knysna.co.za" target="_blank"><span class="ico">&#129450;</span><span class="lt">Knysna Tourism</span><span class="ar">&#8599;</span></a></li><li><a href="https://www.hertzsa.co.za" target="_blank"><span class="ico">&#128665;</span><span class="lt">Aluguel de Carro - Hertz SA</span><span class="ar">&#8599;</span></a></li></ul></div></div>
+  <div class="card">
+    <div class="card-hero hero1">&#127956;</div>
+    <div class="num">1</div>
+    <div class="body">
+      <div class="badge b1">Cidade + Natureza</div>
+      <h2>Cape Town &amp; Winelands</h2>
+      <div class="meta"><div class="mi"><strong>6-7 dias</strong></div><div class="clim">8-17C Inverno</div></div>
+      <div class="desc">Table Mountain, Cape Point, Bo-Kaap e as vinicolas de Franschhoek e Stellenbosch.</div>
+      <div class="st">Sites Essenciais</div>
+      <ul class="links">
+        <li><a href="https://www.tablemountain.net" target="_blank"><span class="ico">&#9968;</span><span class="lt">Table Mountain Cableway</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.capepointroute.co.za" target="_blank"><span class="ico">&#127754;</span><span class="lt">Cape Point Route</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.franschhoek.org.za" target="_blank"><span class="ico">&#127863;</span><span class="lt">Franschhoek Wine Valley</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.stellenboschwineroads.co.za" target="_blank"><span class="ico">&#127815;</span><span class="lt">Stellenbosch Winelands</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.capetown.travel" target="_blank"><span class="ico">&#128506;</span><span class="lt">Cape Town Tourism Oficial</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.robben-island.org.za" target="_blank"><span class="ico">&#127963;</span><span class="lt">Robben Island Museum</span><span class="ar">&#8599;</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-hero hero2">&#129409;</div>
+    <div class="num">2</div>
+    <div class="body">
+      <div class="badge b2">Safari Premium</div>
+      <h2>Kruger &amp; Reservas Privadas</h2>
+      <div class="meta"><div class="mi"><strong>4-5 noites</strong></div><div class="clim">12-27C Seco</div></div>
+      <div class="desc">Julho e perfeito para safari. Sabi Sands e Londolozi oferecem os Big Five a metros de distancia.</div>
+      <div class="st">Sites Essenciais</div>
+      <ul class="links">
+        <li><a href="https://www.sanparks.org/parks/kruger" target="_blank"><span class="ico">&#128024;</span><span class="lt">SANParks - Kruger Park</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.londolozi.com" target="_blank"><span class="ico">&#129409;</span><span class="lt">Londolozi Game Reserve</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.sabisands.co.za" target="_blank"><span class="ico">&#128374;</span><span class="lt">Sabi Sands Game Reserve</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.singita.com" target="_blank"><span class="ico">&#127957;</span><span class="lt">Singita Luxury Lodges</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.andbeyond.com/destinations/africa/south-africa" target="_blank"><span class="ico">&#127749;</span><span class="lt">andBeyond South Africa</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.krugerpark.co.za" target="_blank"><span class="ico">&#128214;</span><span class="lt">Kruger Park - Guia Completo</span><span class="ar">&#8599;</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-hero hero3">&#128011;</div>
+    <div class="num">3</div>
+    <div class="body">
+      <div class="badge b3">Road Trip</div>
+      <h2>Garden Route</h2>
+      <div class="meta"><div class="mi"><strong>7-10 dias</strong></div><div class="clim">11-19C Dias claros</div></div>
+      <div class="desc">Baleias em Hermanus, bungee de 216m na Bloukrans Bridge e ostras famosas em Knysna.</div>
+      <div class="st">Sites Essenciais</div>
+      <ul class="links">
+        <li><a href="https://www.gardenroute.co.za" target="_blank"><span class="ico">&#128739;</span><span class="lt">Garden Route Tourism</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.whalewatchsa.com" target="_blank"><span class="ico">&#128011;</span><span class="lt">Whale Watching Hermanus</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.faceadrenalin.com/bungee" target="_blank"><span class="ico">&#129656;</span><span class="lt">Bloukrans Bungee Jump</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.sanparks.org/parks/garden_route" target="_blank"><span class="ico">&#127807;</span><span class="lt">Tsitsikamma National Park</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.knysna.co.za" target="_blank"><span class="ico">&#129450;</span><span class="lt">Knysna Tourism</span><span class="ar">&#8599;</span></a></li>
+        <li><a href="https://www.hertzsa.co.za" target="_blank"><span class="ico">&#128665;</span><span class="lt">Aluguel de Carro - Hertz SA</span><span class="ar">&#8599;</span></a></li>
+      </ul>
+    </div>
+  </div>
 </div>
+
+<!-- HOTEIS - SEM PRECOS -->
 <div class="hotels-section">
-<div class="hotel-block"><div class="hotel-block-header"><div class="hb-tag hb-tag-green">Acomodacao</div><h3>Hoteis em Cape Town <span style="font-size:15px;color:#8a7a60;font-weight:400">- 5 noites</span></h3><p>Opcoes de luxo para uma estadia inesquecivel</p></div><div class="sub-section" style="padding-bottom:24px"><table class="hotel-table"><thead><tr><th>Hotel</th><th>Localizacao</th><th>Diaria USD</th><th>Diaria BRL</th><th>Destaque</th></tr></thead><tbody><tr><td>The Silo Hotel <span class="star-badge">Top Pick</span></td><td>V&amp;A Waterfront</td><td class="price">$1.335+</td><td class="price">~R$6.970+</td><td class="highlight">Ultra-luxo, design iconico, vista Table Mountain</td></tr><tr><td>Ellerman House</td><td>Bantry Bay</td><td class="price">$900-1.200</td><td class="price">~R$4.700-6.260</td><td class="highlight">Apenas 13 suites, colecao de arte</td></tr><tr><td>Mount Nelson (Belmond)</td><td>Centro</td><td class="price">$885-995</td><td class="price">~R$4.620-5.190</td><td class="highlight">Historico 125 anos, famoso Afternoon Tea</td></tr><tr><td>Cape Grace</td><td>V&amp;A Waterfront</td><td class="price">$875-966</td><td class="price">~R$4.570-5.040</td><td class="highlight">Localizacao premium, cafe incluso</td></tr></tbody></table></div></div>
-<div class="hotel-block"><div class="hotel-block-header"><div class="hb-tag hb-tag-blue">Acomodacao</div><h3>Hospedagens - Garden Route <span style="font-size:15px;color:#8a7a60;font-weight:400">- 5 noites</span></h3><p>Opcoes ao longo da rota por destino</p></div><div class="sub-section"><div class="sub-section-title">Hermanus - 2 noites</div><table class="hotel-table"><thead><tr><th>Hospedagem</th><th>Diaria USD</th><th>Destaque</th></tr></thead><tbody><tr><td>Birkenhead House <span class="star-badge">Top Pick</span></td><td class="price">$914+</td><td class="highlight">All-inclusive, vista penhasco, baleias da janela</td></tr><tr><td>Grootbos Nature Reserve</td><td class="price">$1.325+</td><td class="highlight">Reserva privada, sustentavel, all-inclusive</td></tr><tr><td>The Marine Hotel</td><td class="price">$237-393</td><td class="highlight">Custo-beneficio excelente, vista espetacular</td></tr></tbody></table></div><div class="sub-section"><div class="sub-section-title">Knysna - 2 noites</div><table class="hotel-table"><thead><tr><th>Hospedagem</th><th>Diaria USD</th><th>Destaque</th></tr></thead><tbody><tr><td>Conrad Pezula Resort</td><td class="price">$260+</td><td class="highlight">Resort completo, golfe, spa, vista oceano</td></tr><tr><td>Tsala Treetop Lodge <span class="star-badge">Unico</span></td><td class="price">$850-1.000</td><td class="highlight">Suites suspensas na floresta milenar</td></tr></tbody></table></div><div class="sub-section" style="padding-bottom:24px"><div class="sub-section-title">Tsitsikamma - 1 noite</div><table class="hotel-table"><thead><tr><th>Hospedagem</th><th>Diaria USD</th><th>Destaque</th></tr></thead><tbody><tr><td>Tsala Treetop Lodge <span class="star-badge">Unico</span></td><td class="price">$850-1.000</td><td class="highlight">Experiencia unica nas copas das arvores</td></tr><tr><td>Hog Hollow Country Lodge</td><td class="price">Sob consulta</td><td class="highlight">Lodge charmoso na borda da floresta</td></tr></tbody></table></div></div>
-<div class="hotel-block"><div class="hotel-block-header"><div class="hb-tag hb-tag-red">Acomodacao</div><h3>Lodges - Greater Kruger Safari <span style="font-size:15px;color:#8a7a60;font-weight:400">- 4 noites all-inclusive</span></h3><p>Todos incluem refeicoes, bebidas e game drives</p></div><div class="sub-section" style="padding-bottom:24px"><table class="hotel-table"><thead><tr><th>Lodge</th><th>Diaria/pessoa USD</th><th>Diaria/pessoa BRL</th><th>Suites</th><th>Destaque</th></tr></thead><tbody><tr><td>Londolozi Tree Camp</td><td class="price">$1.538</td><td class="price">~R$8.030</td><td>6</td><td class="highlight">Centenario em 2026, elevado sobre o rio</td></tr><tr><td>Sabi Sabi Earth Lodge</td><td class="price">$2.477</td><td class="price">~R$12.930</td><td>13</td><td class="highlight">Design moderno, spa Amani, Amber Suite</td></tr><tr><td>Singita Boulders <span class="star-badge">Ultra-exclusivo</span></td><td class="price">$3.328</td><td class="price">~R$17.370</td><td>12</td><td class="highlight">Adega premiada, rio Sand</td></tr><tr><td>Royal Malewane</td><td class="price">$3.000-3.500</td><td class="price">~R$15.660-18.270</td><td>9</td><td class="highlight">Melhores rastreadores da Africa</td></tr></tbody></table></div></div>
+
+  <!-- CAPE TOWN -->
+  <div class="hotel-block">
+    <div class="hotel-block-header">
+      <div class="hb-tag hb-tag-green">Acomodacao</div>
+      <h3>Hoteis em Cape Town <span style="font-size:14px;color:#8a7a60;font-weight:400">- 5 noites</span></h3>
+      <p>Opcoes de luxo para uma estadia inesquecivel</p>
+    </div>
+    <div class="sub-section" style="padding-bottom:20px">
+      <div class="hotel-cards">
+        <div class="hotel-card">
+          <div class="hotel-card-name">The Silo Hotel <span class="star-badge">Top Pick</span></div>
+          <div class="hotel-card-loc">V&amp;A Waterfront</div>
+          <div class="hotel-card-highlight">Ultra-luxo, design iconico, vista Table Mountain</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Ellerman House</div>
+          <div class="hotel-card-loc">Bantry Bay</div>
+          <div class="hotel-card-highlight">Apenas 13 suites, colecao de arte, mais intimo</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Mount Nelson (Belmond)</div>
+          <div class="hotel-card-loc">Centro</div>
+          <div class="hotel-card-highlight">Historico 125 anos, famoso Afternoon Tea</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Cape Grace</div>
+          <div class="hotel-card-loc">V&amp;A Waterfront</div>
+          <div class="hotel-card-highlight">Localizacao premium, cafe incluso</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GARDEN ROUTE -->
+  <div class="hotel-block">
+    <div class="hotel-block-header">
+      <div class="hb-tag hb-tag-blue">Acomodacao</div>
+      <h3>Hospedagens - Garden Route <span style="font-size:14px;color:#8a7a60;font-weight:400">- 5 noites</span></h3>
+      <p>Opcoes ao longo da rota, por destino</p>
+    </div>
+    <div class="sub-section">
+      <div class="sub-section-title">Hermanus - 2 noites</div>
+      <div class="hotel-cards">
+        <div class="hotel-card">
+          <div class="hotel-card-name">Birkenhead House <span class="star-badge">Top Pick</span></div>
+          <div class="hotel-card-highlight">All-inclusive, vista do penhasco, baleias da janela</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Grootbos Nature Reserve</div>
+          <div class="hotel-card-highlight">Reserva privada, sustentavel, all-inclusive</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">The Marine Hotel</div>
+          <div class="hotel-card-highlight">Custo-beneficio excelente, vista espetacular</div>
+        </div>
+      </div>
+    </div>
+    <div class="sub-section">
+      <div class="sub-section-title">Knysna - 2 noites</div>
+      <div class="hotel-cards">
+        <div class="hotel-card">
+          <div class="hotel-card-name">Conrad Pezula Resort</div>
+          <div class="hotel-card-highlight">Resort completo, golfe, spa, vista do oceano</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Tsala Treetop Lodge <span class="star-badge">Unico</span></div>
+          <div class="hotel-card-highlight">Suites suspensas na floresta milenar</div>
+        </div>
+      </div>
+    </div>
+    <div class="sub-section" style="padding-bottom:20px">
+      <div class="sub-section-title">Tsitsikamma - 1 noite</div>
+      <div class="hotel-cards">
+        <div class="hotel-card">
+          <div class="hotel-card-name">Tsala Treetop Lodge <span class="star-badge">Unico</span></div>
+          <div class="hotel-card-highlight">Experiencia unica nas copas das arvores</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Hog Hollow Country Lodge</div>
+          <div class="hotel-card-highlight">Lodge charmoso na borda da floresta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KRUGER -->
+  <div class="hotel-block">
+    <div class="hotel-block-header">
+      <div class="hb-tag hb-tag-red">Acomodacao</div>
+      <h3>Lodges - Greater Kruger Safari <span style="font-size:14px;color:#8a7a60;font-weight:400">- 4 noites all-inclusive</span></h3>
+      <p>Todos incluem refeicoes, bebidas e game drives</p>
+    </div>
+    <div class="sub-section" style="padding-bottom:20px">
+      <div class="hotel-cards">
+        <div class="hotel-card">
+          <div class="hotel-card-name">Londolozi Tree Camp</div>
+          <div class="hotel-card-loc">6 suites</div>
+          <div class="hotel-card-highlight">Centenario em 2026, elevado sobre o rio Sand</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Sabi Sabi Earth Lodge</div>
+          <div class="hotel-card-loc">13 suites</div>
+          <div class="hotel-card-highlight">Design moderno, spa Amani, Amber Suite</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Singita Boulders <span class="star-badge">Ultra-exclusivo</span></div>
+          <div class="hotel-card-loc">12 suites</div>
+          <div class="hotel-card-highlight">Adega premiada, rio Sand, ultra-exclusivo</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-card-name">Royal Malewane</div>
+          <div class="hotel-card-loc">9 suites</div>
+          <div class="hotel-card-highlight">Melhores rastreadores da Africa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
 <footer>Planejado com amor para <span>Julho 2026</span> - Africa do Sul</footer>
 </body>
 </html>
